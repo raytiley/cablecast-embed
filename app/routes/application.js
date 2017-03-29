@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   player: Ember.inject.service(),
   beforeModel() {
     let params = this.paramsFor(this.routeName);
-    this.set('player.api', params.api);
+    this.set('player.api', params.api || 'tighty.tv');
   },
   actions: {
     play(show) {
