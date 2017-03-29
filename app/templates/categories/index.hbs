@@ -1,0 +1,8 @@
+<ul class="list-group">
+{{log 'Categories' model}}
+{{#each model as |category|}}
+  {{#link-to 'categories.view' category.name}}
+    <li class="list-group-item">{{category.name}}</li>
+  {{/link-to}}
+{{/each}}
+</ul>

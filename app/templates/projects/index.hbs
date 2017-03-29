@@ -1,0 +1,7 @@
+<ul class="list-group">
+{{#each model as |search|}}
+  {{#link-to 'projects.view' search.id}}
+    <li class="list-group-item">{{search.name}}</li>
+  {{/link-to}}
+{{/each}}
+</ul>

@@ -1,0 +1,14 @@
+<div class="input-group">
+      {{input value=query type="text" class="form-control" placeholder="Search"}}
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" {{action 'search' query}}>Go!</button>
+      </span>
+    </div>
+
+<ul class="list-group">
+  {{#each results as |show|}}
+    <a href='#' {{action 'play' show}}>
+      <li class="list-group-item">{{show.cgTitle}}</li>
+    </a>
+  {{/each}}
+</ul>

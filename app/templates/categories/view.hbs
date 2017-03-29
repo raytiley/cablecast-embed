@@ -1,0 +1,12 @@
+<ul class="list-group">
+{{#link-to 'categories.index'}}
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-menu-left"></span> Categories
+  </li>
+{{/link-to}}
+{{#each model as |show|}}
+  <a href='#' {{action 'play' show}}>
+    <li class="list-group-item">{{show.cgTitle}}</li>
+  </a>
+{{/each}}
+</ul>

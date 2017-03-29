@@ -1,0 +1,64 @@
+body {
+  width: 1px;
+  min-width: 100%;
+}
+
+.player-selector {
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.player {
+  max-width: 600px;
+}
+
+.player.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top .5s, left .5s, bottom .5s, right .5s;
+  z-index: 250;
+}
+
+.player.active.browse {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  bottom: 0;
+  right: 1em;
+  transition: top .5s, left .5s, bottom .5s, right .5s;
+}
+
+@media (min-width: 768px) {
+  .player.active.browse {
+    position: absolute;
+    top: 50vh;
+    left: 80vw;
+    bottom: 0;
+    right: 1em;
+    transition: top .5s, left .5s, bottom .5s, right .5s;
+  }
+}
+
+.player-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  opacity: 0;
+  background-color: white;
+}
+
+.player-background.active:not(.browse) {
+  display: block;
+  opacity: 1;
+  background-color: white;
+  transition: opacity .25s;
+}
+
+.overlay {
+  cursor: pointer;
+}

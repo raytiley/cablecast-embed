@@ -7,6 +7,16 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('search');
+  this.route('projects', function() {
+    this.route('view', {path: 'view/:id'});
+  });
+  this.route('categories', function() {
+    this.route('view', {path: 'view/:id'});
+  });
+  this.route('playlists', function() {
+    this.route('view', {path: 'view/:id'});
+  });
 });
 
 export default Router;
