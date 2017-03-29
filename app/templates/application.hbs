@@ -29,7 +29,7 @@
 <div class="player {{if player.activeShow 'active'}} {{if player.browsing 'browse'}}">
   {{#if player.activeShow}}
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="http://gnat.cablecast.tv/cablecastapi/embed?show_id={{player.activeShow.id}}"></iframe>
+      <iframe class="embed-responsive-item" src="http://{{player.api}}/cablecastapi/embed?show_id={{player.activeShow.id}}"></iframe>
     </div>
     {{#unless player.browsing}}
       <button {{action 'browse'}} class="btn btn-primary btn-block">
