@@ -43,7 +43,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.rootURL = '/cablecast-embed';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
